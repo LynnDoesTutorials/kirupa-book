@@ -1,0 +1,20 @@
+h1 {
+  font-stretch: expanded;
+}
+
+#container {
+  padding: 50px;
+  background-color: #eee;
+}
+
+#container h1 {
+  font-size: 48px;
+  font-family: sans-serif;
+  color: #0080a8;
+}
+
+#root {
+  border-style: groove;
+  border-width: 0.5em;
+  border-color: #ff11bb;
+}
