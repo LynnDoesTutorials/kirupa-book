@@ -18,11 +18,7 @@ const LightningCounter = createReactClass({
   render: function () {
     return (
       <div>
-        <h1>Hello from Lightning Counter</h1>
         <h1>{this.state.strikes}</h1>
-        <h2>LIGHTNING STRIKES</h2>
-        <h2>WORLDWIDE</h2>
-        <p>(since you loaded this example)</p>
       </div>
     );
   }
@@ -30,6 +26,10 @@ const LightningCounter = createReactClass({
 
 const LightningCounterDisplay = createReactClass({
   render: function () {
+    const commonStyle = {
+      margin: 0,
+      padding: 0
+    }
 
     const divStyle = {
       width: 250,
@@ -41,9 +41,24 @@ const LightningCounterDisplay = createReactClass({
       borderRadius: 10
     };
 
+    const textStyles = {
+      emphasis: {
+        fontSize: 38
+      },
+      smallEmphasis: {
+      },
+      small: {
+        fontSize: 17,
+        opacity: 0.5
+      }
+    }
+
     return (
       <div style={divStyle}>
         <LightningCounter />
+        <h2 style={textStyles.smallEmphasis}>Where is this?</h2>
+        <h2 style={textStyles.emphasis}>WORLDWIDE</h2>
+        <p style={textStyles.small}>(since you loaded this example)</p>
       </div>
     );
   }
