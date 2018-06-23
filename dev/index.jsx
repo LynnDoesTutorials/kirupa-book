@@ -6,6 +6,7 @@ import Square from './Square';
 import Label from './Label';
 import Card from './Card';
 import Jsxquirks from './Jsxquirks';
+import LightningCounterDisplay from './LightningCounterDisplay';
 
 const destination = document.querySelector("#container");
 
@@ -53,6 +54,9 @@ const Letter = createReactClass({
 ReactDOM.render(
   <div>
     <div>
+      <LightningCounterDisplay></LightningCounterDisplay>
+    </div>
+    <div>
       <Jsxquirks>Saying quirks</Jsxquirks>
     </div>
     <div>
@@ -92,7 +96,7 @@ ReactDOM.render(
 //       <Buttonify behavior="Submit">SEND DATA</Buttonify>
 //     </div>
 //<div>
-<Letter />
+//<Letter />
 // </div>
 //   </div >,
 //   destination
