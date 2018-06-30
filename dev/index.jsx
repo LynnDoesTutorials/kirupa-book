@@ -7,6 +7,9 @@ import Label from './Label';
 import Card from './Card';
 import Jsxquirks from './Jsxquirks';
 import LightningCounterDisplay from './LightningCounterDisplay';
+//import Circle from './Circle';
+import showCircle from './showCircle';
+
 
 const destination = document.querySelector("#container");
 
@@ -51,8 +54,14 @@ const Letter = createReactClass({
   }
 });
 
+
+
 ReactDOM.render(
   <div>
+    <div>This is before the circle</div>
+    <div>
+      {showCircle()}
+    </div>
     <div>
       <LightningCounterDisplay></LightningCounterDisplay>
     </div>
