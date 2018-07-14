@@ -20,6 +20,10 @@ const Counter = createReactClass({
 });
 
 const CounterParent = createReactClass({
+  getDefaultProps: function () {
+    console.log("getDefaultProps");
+    return {};
+  },
   getInitialState: function () {
     return {
       count: 0
@@ -50,6 +54,12 @@ const CounterParent = createReactClass({
     this.setState({
       count: currentCount
     });
+  },
+  componentWillUpdate: function (newProps, newState) {
+    console.log("componentWillUPdate ", newProps, " ", "newState", newState);
+  },
+  componentDidMount: function () {
+    console.log("yes, didmont was called");
   },
   render: function () {
     const backgroundStyle = {
